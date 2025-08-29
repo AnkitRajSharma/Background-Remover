@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Result Page
+{% endblock %}
+
+{% block content %}
+<div class="bg-gray-100 flex flex-col items-center justify-center p-6">
+    
+    <h2 class="text-2xl font-bold text-gray-800 mb-6">Compare Images</h2>
+    
+    <!-- Image Comparison Section -->
+    <div class="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-2xl shadow-lg items-center">
+        
+        <!-- Original Image -->
+        <div class="flex flex-col items-center">
+            <h3 class="text-lg font-medium text-gray-700 mb-2">Original</h3>
+            <img src="{{ input_image }}" alt="Original Image" 
+                 class="rounded-lg border border-gray-300 shadow-md w-64 md:w-96">
+        </div>
+
+        <!-- Background Removed Image -->
+        <div class="flex flex-col items-center">
+            <h3 class="text-lg font-medium text-gray-700 mb-2">Background Removed</h3>
+            <img src="{{ output_image }}" alt="Background Removed Image" 
+                 class="rounded-lg border border-gray-300 shadow-md w-64 md:w-96">
+        </div>
+        
+    </div>
+
+    <!-- Buttons -->
+    <div class="flex gap-4 mt-6">
+        <a href="{{ output_image }}" download="background_removed.png" 
+           class="bg-green-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-green-600 transition duration-300">
+            Download Output (PNG)
+        </a>
+        
+        <a href="{% url 'upload_img' %}" 
+           class="bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-300">
+            Try Another
+        </a>
+    </div>
+
+</div>
+{% endblock %}

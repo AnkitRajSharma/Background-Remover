@@ -1,0 +1,56 @@
+{% comment %} {% comment %} {% extends "layout.html" %}
+{% load static %}
+
+{% block title %}
+Home Page
+{% endblock %}
+
+{% block content %}
+this is the home  page
+{% comment %} <div class="container mx-auto py-12 px-4">
+    <h1 class="text-4xl font-bold text-center text-gray-800 mb-12">Background Removal</h1>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+            <img class="h-64 w-full object-contain p-6" src="{{ MEDIA_URL }}website_icon/erase.png" alt="Background Remove Icon">
+
+            <div class="p-6 text-center">
+                <h3 class="text-2xl font-bold text-gray-800 mb-2">Remove Background</h3>
+                <p class="text-gray-600 mb-4">Easily remove the background from your images instantly.</p>
+
+                <a href="{% url 'upload_img' %}">
+                    <button class="bg-gradient-to-r from-yellow-400 to-yellow-500 text-black px-6 py-3 rounded-full font-semibold shadow-md hover:from-yellow-500 hover:to-yellow-600 transition duration-300">
+                        Get Started
+                    </button>
+                </a>
+            </div>
+        </div>
+
+        <!-- Card 2 (optional example) -->
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+            <img class="h-64 w-full object-contain p-6" src="{{ MEDIA_URL }}website_icon/erase.png" alt="Batch Remove Icon">
+
+            <div class="p-6 text-center">
+                <h3 class="text-2xl font-bold text-gray-800 mb-2">Batch Processing</h3>
+                <p class="text-gray-600 mb-4">Remove background from multiple images at once with ease.</p>
+
+                <a href="{% url 'upload_img' %}">
+                    <button class="bg-gradient-to-r from-yellow-400 to-yellow-500 text-black px-6 py-3 rounded-full font-semibold shadow-md hover:from-yellow-500 hover:to-yellow-600 transition duration-300">
+                        Try Now
+                    </button>
+                </a>
+            </div>
+        </div>
+
+        <!-- Add more cards as needed --> 
+
+
+
+    </div>
+</div>
+
+
+
+
+{% endblock %} {% endcomment %}
